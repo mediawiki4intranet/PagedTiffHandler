@@ -337,6 +337,7 @@ class PagedTiffImage {
 		}
 
 		$infos = null;
+		$state->prevPage = -1;
 		preg_match_all( '/\[BEGIN\](.+?)\[END\]/si', $dump, $infos, PREG_SET_ORDER );
 		// ImageMagick < 6.6.8-10 starts page numbering at 1; >= 6.6.8-10 starts at zero. Handle both
 		// and map to one-based page numbers (which are assumed in various other parts of the support

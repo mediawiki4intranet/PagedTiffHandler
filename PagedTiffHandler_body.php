@@ -52,7 +52,7 @@ class PagedTiffHandler extends ImageHandler {
 	 * - identify-warnings
 	 * - check for running-identify-service
 	 */
-	function verifyUpload( $fileName ) {
+	function verifyUpload( $fileName, $destName, $fileProps ) {
 		global $wgTiffUseTiffReader, $wgTiffReaderCheckEofForJS;
 
 		$status = Status::newGood();
